@@ -1,0 +1,26 @@
+{
+  "name": "routineflow",
+  "version": "1.0.0",
+  "description": "A DevOps Automation Dashboard demonstrating Claude Code Routines",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "seed": "node server/db/seed.js",
+    "setup": "npm install && node server/db/seed.js",
+    "trigger:deploy": "node scripts/trigger-api-routine.js deploy",
+    "trigger:alert": "node scripts/trigger-api-routine.js alert",
+    "simulate:webhook": "node scripts/simulate-webhook.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.3",
+    "lowdb": "^1.0.0",
+    "node-cron": "^3.0.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
